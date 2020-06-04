@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+
+<h2><strong>The Profile of your Favorite Restaurant:</strong></h2>
+
+<table>
+  <tr>
+    <th>Restaurant Name</th>
+    <th>Cuisines</th>
+    <th>Cost for Two People</th>
+    <th>Operational Hours</th>
+    <th>Rating Votes</th>
+    <th>Location</th>
+    <th>Type</th>
+    <th>Features</th>
+   
+  </tr>
+  <tr>
+    <td>{{ favorit['Restaurant_Name'] }}</td>
+    <td>{{ favorit['Cuisines'] }}</td>
+    <td>{{ favorit['Cost_for_two'] }}</td>
+    <td>{{ favorit['Operational_hours'] }}</td>
+    <td>{{ favorit['Rating_votes'] }}</td>
+    <td>{{ favorit['Restaurant_Location'] }}</td>
+    <td>{{ favorit['Restaurant_Type'] }}</td>
+    <td>{{ favorit['Features'] }}</td>
+  </tr>
+
+</table>
+
+<br>
+<br>
+
+<h2><strong>Recommendation based on your Favorite Restaurant's Similarity:</strong></h2>
+
+<table>
+  <tr>
+    <th>Restaurant Name</th>
+    <th>Cuisines</th>
+    <th>Cost for Two People</th>
+    <th>Operational Hours</th>
+    <th>Rating Votes</th>
+    <th>Location</th>
+    <th>Type</th>
+    <th>Features</th>
+    
+  </tr>
+    {%for i in range(0, 10)%}
+        <tr>
+          <td>{{ rek_resto[i]['name'] }}</td>
+          <td>{{ rek_resto[i]['cuisines'] }}</td>
+          <td>{{ rek_resto[i]['cost'] }}</td>
+          <td>{{ rek_resto[i]['hours'] }}</td>
+          <td>{{ rek_resto[i]['rating'] }}</td>
+          <td>{{ rek_resto[i]['location'] }}</td>
+          <td>{{ rek_resto[i]['type'] }}</td>
+          <td>{{ rek_resto[i]['features'] }}</td>
+        </tr>
+    {%endfor%}
+</table>
+
+
+<br>
+<br>
+
+<h2><strong>Recommendation based on your Favorite Restaurant's Cuisines:</strong></h2>
+
+<table>
+  <tr>
+    <th>Restaurant Name</th>
+    <th>Cuisines</th>
+    <th>Cost for Two People</th>
+    <th>Operational Hours</th>
+    <th>Rating Votes</th>
+    <th>Location</th>
+    <th>Type</th>
+    <th>Features</th>
+    
+  </tr>
+    {%for i in range(0, 10)%}
+        <tr>
+          <td>{{ rek_cuisines[i]['name'] }}</td>
+          <td>{{ rek_cuisines[i]['cuisines'] }}</td>
+          <td>{{ rek_cuisines[i]['cost'] }}</td>
+          <td>{{ rek_cuisines[i]['hours'] }}</td>
+          <td>{{ rek_cuisines[i]['rating'] }}</td>
+          <td>{{ rek_cuisines[i]['location'] }}</td>
+          <td>{{ rek_cuisines[i]['type'] }}</td>
+          <td>{{ rek_cuisines[i]['features'] }}</td>
+        </tr>
+    {%endfor%}
+</table>
+
+<br>
+<br>
+
+<h2><strong>Recommendation based on your Favorite Restaurant's Features:</strong></h2>
+
+<table>
+  <tr>
+    <th>Restaurant Name</th>
+    <th>Cuisines</th>
+    <th>Cost for Two People</th>
+    <th>Operational Hours</th>
+    <th>Rating Votes</th>
+    <th>Location</th>
+    <th>Type</th>
+    <th>Features</th>
+    
+  </tr>
+    {%for i in range(0, 10)%}
+        <tr>
+          <td>{{ rek_features[i]['name'] }}</td>
+          <td>{{ rek_features[i]['cuisines'] }}</td>
+          <td>{{ rek_features[i]['cost'] }}</td>
+          <td>{{ rek_features[i]['hours'] }}</td>
+          <td>{{ rek_features[i]['rating'] }}</td>
+          <td>{{ rek_features[i]['location'] }}</td>
+          <td>{{ rek_features[i]['type'] }}</td>
+          <td>{{ rek_features[i]['features'] }}</td>
+        </tr>
+    {%endfor%}
+</table>
+
+
+<br>
+<br>
+
+<h2><strong>Recommendation based on your Favorite Restaurant's Type:</strong></h2>
+
+<table>
+  <tr>
+    <th>Restaurant Name</th>
+    <th>Cuisines</th>
+    <th>Cost for Two People</th>
+    <th>Operational Hours</th>
+    <th>Rating Votes</th>
+    <th>Location</th>
+    <th>Type</th>
+    <th>Features</th>
+    
+  </tr>
+    {%for i in range(0, 10)%}
+        <tr>
+          <td>{{ rek_type[i]['name'] }}</td>
+          <td>{{ rek_type[i]['cuisines'] }}</td>
+          <td>{{ rek_type[i]['cost'] }}</td>
+          <td>{{ rek_type[i]['hours'] }}</td>
+          <td>{{ rek_type[i]['rating'] }}</td>
+          <td>{{ rek_type[i]['location'] }}</td>
+          <td>{{ rek_type[i]['type'] }}</td>
+          <td>{{ rek_type[i]['features'] }}</td>
+        </tr>
+    {%endfor%}
+</table>
+
+
+
+</body>
+</html>
